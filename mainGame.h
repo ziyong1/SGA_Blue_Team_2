@@ -4,7 +4,8 @@
 class mainGame : public gameNode
 {
 private:
-
+	int _winSizeX;
+	int _winSizeY;
 public:
 	virtual HRESULT init(void);
 	virtual void release(void);

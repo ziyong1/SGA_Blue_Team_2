@@ -142,13 +142,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="animation.h" />
+    <ClInclude Include="BrontoBurt.h" />
+    <ClInclude Include="BroomHatter.h" />
     <ClInclude Include="button.h" />
     <ClInclude Include="commonMacroFunction.h" />
     <ClInclude Include="database.h" />
+    <ClInclude Include="Door.h" />
     <ClInclude Include="effect.h" />
     <ClInclude Include="effectManager.h" />
     <ClInclude Include="enemy.h" />
     <ClInclude Include="enemyBase.h" />
+    <ClInclude Include="enemyInterface.h" />
     <ClInclude Include="enemyManager.h" />
     <ClInclude Include="gameNode.h" />
     <ClInclude Include="gameScene.h" />
@@ -180,12 +184,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="animation.cpp" />
+    <ClCompile Include="BrontoBurt.cpp" />
+    <ClCompile Include="BroomHatter.cpp" />
     <ClCompile Include="button.cpp" />
     <ClCompile Include="database.cpp" />
+    <ClCompile Include="Door.cpp" />
     <ClCompile Include="effect.cpp" />
     <ClCompile Include="effectManager.cpp" />
     <ClCompile Include="enemy.cpp" />
     <ClCompile Include="enemyBase.cpp" />
+    <ClCompile Include="enemyInterface.cpp" />
     <ClCompile Include="enemyManager.cpp" />
     <ClCompile Include="gameNode.cpp" />
     <ClCompile Include="gameScene.cpp" />

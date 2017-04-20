@@ -35,7 +35,7 @@ HRESULT titleScene::init()
 
 void titleScene::release()
 {
-	
+	IMAGEMANAGER->deleteImage("title");
 }
 
 void titleScene::update()

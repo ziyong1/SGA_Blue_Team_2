@@ -70,6 +70,9 @@
     <Filter Include="MainGame\GameScene\ui">
       <UniqueIdentifier>{2c9c7b7a-b4d0-48ef-8e55-6296a295942e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MainGame\GameScene\enemy\enemys">
+      <UniqueIdentifier>{fa7b172e-b34a-4edc-8b4d-0cad831f9fb8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -183,6 +186,18 @@
     <ClInclude Include="settingScene.h">
       <Filter>MainGame\TitleScene</Filter>
     </ClInclude>
+    <ClInclude Include="BrontoBurt.h">
+      <Filter>MainGame\GameScene\enemy\enemys</Filter>
+    </ClInclude>
+    <ClInclude Include="BroomHatter.h">
+      <Filter>MainGame\GameScene\enemy\enemys</Filter>
+    </ClInclude>
+    <ClInclude Include="enemyInterface.h">
+      <Filter>MainGame\GameScene\enemy\enemys</Filter>
+    </ClInclude>
+    <ClInclude Include="Door.h">
+      <Filter>MainGame\GameScene\map</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -280,6 +295,18 @@
     </ClCompile>
     <ClCompile Include="settingScene.cpp">
       <Filter>MainGame\TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="BrontoBurt.cpp">
+      <Filter>MainGame\GameScene\enemy\enemys</Filter>
+    </ClCompile>
+    <ClCompile Include="BroomHatter.cpp">
+      <Filter>MainGame\GameScene\enemy\enemys</Filter>
+    </ClCompile>
+    <ClCompile Include="enemyInterface.cpp">
+      <Filter>MainGame\GameScene\enemy\enemys</Filter>
+    </ClCompile>
+    <ClCompile Include="Door.cpp">
+      <Filter>MainGame\GameScene\map</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

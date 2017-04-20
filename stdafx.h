@@ -31,8 +31,8 @@ using namespace BLUE_UTIL;
 #define WINNAME (LPTSTR)(TEXT("BLUE Team"))
 #define WINSTARTX 0
 #define WINSTARTY 10
-#define WINSIZEX 800	
-#define WINSIZEY 800
+#define WINSIZEX 600
+#define WINSIZEY 400
 #define WINSTYLE WS_CAPTION | WS_SYSMENU
 
 #define RND randomFunction::getSingleton()

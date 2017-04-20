@@ -69,8 +69,8 @@ void gameScene::update()
 
 void gameScene::render()
 {
+	_mm->render();
 	_kirby->render();
 	_em->render();
-	_mm->render();
 	_uim->render();
 }

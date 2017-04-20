@@ -19,7 +19,7 @@ HRESULT settingScene::init()
 	SOUNDMANAGER->addSound("testEffect", "sound\\test.wav", false, false);
 
 	IMAGEMANAGER->addFrameImage("setting", "image\\setting.bmp", WINSIZEX * 2, WINSIZEY * 2, 2, 2, false, RGB(255, 0, 255));
-	IMAGEMANAGER->addFrameImage("number", "image\\number.bmp", 810, 83, 10, 1, true, RGB(255, 0, 255));
+	IMAGEMANAGER->addFrameImage("number", "image\\number.bmp", 610, 41, 10, 1, true, RGB(255, 0, 255));
 
 	_selectIndex = 0;
 	_alpha = 100;
@@ -34,6 +34,8 @@ HRESULT settingScene::init()
 
 void settingScene::release()
 {
+	IMAGEMANAGER->deleteImage("setting");
+	IMAGEMANAGER->deleteImage("number");
 	char str[128];
 	sprintf(str, "%2.1f", _backVolume);
 	DATABASE->setElementData("backVolume", str);
@@ -116,11 +118,11 @@ void settingScene::render()
 	IMAGEMANAGER->findImage("setting")->alphaFrameRender(getMemDC(), 0, 0, _selectIndex, 1,_alpha);
 
 	if(_backNumber > 9)
-		IMAGEMANAGER->findImage("number")->frameRender(getMemDC(), 230, 640, _backNumber/10, 0);
-	IMAGEMANAGER->findImage("number")->frameRender(getMemDC(), 300, 640, _backNumber%10, 0);
+		IMAGEMANAGER->findImage("number")->frameRender(getMemDC(), 172, 320, _backNumber/10, 0);
+	IMAGEMANAGER->findImage("number")->frameRender(getMemDC(), 225, 320, _backNumber%10, 0);
 	if(_effectNumber > 9)
-		IMAGEMANAGER->findImage("number")->frameRender(getMemDC(), 420, 640, _effectNumber /10, 0);
-	IMAGEMANAGER->findImage("number")->frameRender(getMemDC(), 490, 640, _effectNumber %10, 0);
+		IMAGEMANAGER->findImage("number")->frameRender(getMemDC(), 315, 320, _effectNumber /10, 0);
+	IMAGEMANAGER->findImage("number")->frameRender(getMemDC(), 367, 320, _effectNumber %10, 0);
 }
 
 int settingScene::getNumber(float volume)

@@ -552,6 +552,22 @@ void image::render(HDC hdc, int destX, int destY)
 	}
 }
 
+void image::render(HDC hdc, int destX, int destY, int destWidth, int destHeight)
+{
+
+		GdiTransparentBlt(hdc,		//복사될 장소의 DC
+			destX,					//복사될 좌표 시작점 X
+			destY,					//복사될 좌표 시작점 Y
+			destWidth,		//복사될 크기 width
+			destHeight,		//복사될 크기 height
+			_imageInfo->hMemDC,		//복사대상 DC
+			0, 0,					//복사될 시작지점(left, top)
+			_imageInfo->width,		//복사될 영역지정 width
+			_imageInfo->height,		//복사될 영역지정 height
+			_transColor);			//복사에서 제외될 색상
+	
+}
+
 //							뿌릴 곳X	   뿌릴곳 Y	가져올곳X(left) 가져올 곳Y(top) 가져올 가로크기, 가져올 세로크기 
 void image::render(HDC hdc, int destX, int destY, int sourX, int sourY, int sourWidth, int sourHeight)
 {

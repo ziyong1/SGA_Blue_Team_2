@@ -25,6 +25,9 @@ HRESULT mainGame::init(void)
 {
 	gameNode::init(true);
 
+	_winSizeX = WINSIZEX;
+	_winSizeY = WINSIZEY;
+
 	SCENEMANAGER->addScene("titleScene", new titleScene);
 	SCENEMANAGER->addScene("menuScene", new menuScene);
 	SCENEMANAGER->addScene("settingScene", new settingScene);
@@ -54,6 +57,12 @@ void mainGame::update(void)
 		_debug = !_debug;
 	}
 
+	RECT temp;
+	GetClientRect(_hWnd, &temp);
+
+	_winSizeX = (temp.right - temp.left);
+	_winSizeY = (temp.bottom - temp.top);
+
 }
 
 //그려주는 곳
@@ -69,6 +78,6 @@ void mainGame::render()
 
 
 	//백버퍼에 옮겨 그려줄 애 건들지마라 얘는
-	this->getBackBuffer()->render(getHDC(), 0, 0);
+	this->getBackBuffer()->render(getHDC(), 0, 0,_winSizeX,_winSizeY);
 
 }

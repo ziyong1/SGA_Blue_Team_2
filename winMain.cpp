@@ -53,7 +53,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd
 		hInstance,				//인스턴스 윈도우 지정
 		NULL);
 
-	setWindowsSize(WINSTARTX, WINSTARTY, WINSIZEX, WINSIZEY);
+	setWindowsSize(WINSTARTX, WINSTARTY, 800, 600);
 
 
 	//화면에 윈도우 창을 보여준다

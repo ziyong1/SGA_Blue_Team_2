@@ -26,6 +26,7 @@ HRESULT menuScene::init()
 
 void menuScene::release()
 {
+	IMAGEMANAGER->deleteImage("menu");
 }
 
 void menuScene::update()

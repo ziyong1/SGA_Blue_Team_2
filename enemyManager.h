@@ -1,8 +1,18 @@
 #pragma once
+#include "BroomHatter.h"
+#include "BrontoBurt.h"
+
 #include <vector>
 
 class enemyBase;
 class mapManager;
+
+enum Enemy
+{
+	boss,
+	minion,
+};
+
 
 class enemyManager
 {
